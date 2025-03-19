@@ -29,11 +29,11 @@ const Contacts: React.FC = () => {
 
     emailjs.send(serviceID, templateID, formData, userID)
       .then(() => {
-        setStatus("Сообщение отправлено успешно!");
+        setStatus("Message Sent Successfully!");
       })
       .catch((error) => {
-        console.error("Ошибка отправки:", error);
-        setStatus("Ошибка отправки сообщения.");
+        console.error("Submission Error:", error);
+        setStatus("Message Submission Error.");
       });
   };
 
@@ -46,10 +46,10 @@ const Contacts: React.FC = () => {
             </div>
     </header>
     <div className="inputForm">
-      <h2>Контактная форма</h2>
+      <h2>Contact Form</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Имя:</label>
+          <label htmlFor="name">NAME:</label>
           <input
             type="text"
             id="name"
@@ -71,7 +71,7 @@ const Contacts: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="message">Сообщение:</label>
+          <label htmlFor="message">Messege:</label>
           <textarea
             id="message"
             name="message"
@@ -80,7 +80,7 @@ const Contacts: React.FC = () => {
             required
           />
         </div>
-        <button type="submit">Отправить</button>
+        <button type="submit">Submit</button>
       </form>
       {status && <p>{status}</p>}
     </div>

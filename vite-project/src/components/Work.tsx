@@ -12,7 +12,7 @@ const About = () => {
         </div>
       </header>
       <main>
-        <h1>HTML. CSS. Java Script. Vue JS. React и т.д</h1>
+        <h1>HTML. CSS. Java Script. Vue JS. React</h1>
         <div className='work1'>
           <div className="hotel">
             <Link to="/Hotel">
